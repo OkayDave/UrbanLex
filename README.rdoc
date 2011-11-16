@@ -1,8 +1,46 @@
-= urban-lexicophile
+= UrbanLexicophile
 
-Description goes here.
+UrbanLexicophile allows you to retrieve definitions of terms from UrbanDictionary.com
 
-== Contributing to urban-lexicophile
+== Installation
+
+	gem install urbanlexicophile
+
+== Note on Usage
+
+UrbanDictionary.com does not provider a public API, please be mindful of this if you use this gem. It works by scraping each page for the definitions. It's probably better if you don't use this gem for anything but personal research, but if you do use it for otherwise please be considerate and cache results and give credit and a link to UrbanDictionary.com
+
+== Usage
+
+First, call this to get an array of all definitions:
+	definitions = UrbanLexicophile.define("urban dictionary")
+
+Then you can iterate through them in the usual manner:
+	definitions.each do |definition|
+		# display all information about each definition
+		puts definition.title
+		puts definition.definition
+		puts definition.example
+		puts definition.author
+	end
+
+As the definitions are returned as an array, you could just do this if you only one the most popular definition:
+	most_popular = definition.first
+
+If there are no definitions for the desired term, the return is just an empty array.
+
+== Dependencies
+
+* Nokogiri
+
+== TODO
+
+* Retrieve vote information about each definition and implement Definition.score()
+* Retrieve the Urban Word of the Day
+* Retrieve information about definition authors
+
+
+== Contributing to UrbanLexicophile
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it

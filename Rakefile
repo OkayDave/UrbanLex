@@ -14,13 +14,15 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "urban-lexicophile"
-  gem.homepage = "http://github.com/DaveKerr/urban-lexicophile"
+  gem.name = "urbanlexicophile"
+  gem.homepage = "http://github.com/DaveKerr/urbanlexicophile"
+  gem.version = UrbanLexicophile::VERSION::STRING
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "A way of retrieving UrbanDictionary.com definitions."
+  gem.description = "A way of retrieving UrbanDictionary.com definitions. Gives you access to all definitions of a term and associated data."
   gem.email = "dave.kerr@gmail.com"
   gem.authors = ["Dave Kerr"]
+  gem.add_dependency 'nokogiri'
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
