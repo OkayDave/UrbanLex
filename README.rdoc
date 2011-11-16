@@ -25,7 +25,7 @@ Then you can iterate through them in the usual manner:
   end
 
 As the definitions are returned as an array, you could just do this if you only one the most popular definition:
-  most_popular = definition.first
+  most_popular = definitions.first
 
 If there are no definitions for the desired term, the return is just an empty array.
 
