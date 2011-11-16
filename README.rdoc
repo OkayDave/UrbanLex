@@ -4,7 +4,7 @@ UrbanLexicophile allows you to retrieve definitions of terms from UrbanDictionar
 
 == Installation
 
-	gem install urbanlexicophile
+  gem install urbanlexicophile
 
 == Note on Usage
 
@@ -13,19 +13,19 @@ UrbanDictionary.com does not provider a public API, please be mindful of this if
 == Usage
 
 First, call this to get an array of all definitions:
-	definitions = UrbanLexicophile.define("urban dictionary")
+  definitions = UrbanLexicophile.define("urban dictionary")
 
 Then you can iterate through them in the usual manner:
-	definitions.each do |definition|
-		# display all information about each definition
-		puts definition.title
-		puts definition.definition
-		puts definition.example
-		puts definition.author
-	end
+  definitions.each do |definition|
+    # display all information about each definition
+    puts definition.title
+    puts definition.definition
+    puts definition.example
+    puts definition.author
+  end
 
 As the definitions are returned as an array, you could just do this if you only one the most popular definition:
-	most_popular = definition.first
+  most_popular = definition.first
 
 If there are no definitions for the desired term, the return is just an empty array.
 
