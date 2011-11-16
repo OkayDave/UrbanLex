@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "urbanlexicophile"
   gem.homepage = "http://github.com/DaveKerr/urbanlexicophile"
-  gem.version = UrbanLexicophile::VERSION::STRING
+  gem.version = "0.1.0"
   gem.license = "MIT"
   gem.summary = "A way of retrieving UrbanDictionary.com definitions."
   gem.description = "A way of retrieving UrbanDictionary.com definitions. Gives you access to all definitions of a term and associated data."
@@ -49,7 +49,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "urban-lexicophile #{version}"
+  rdoc.title = "urbanlexicophile #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
